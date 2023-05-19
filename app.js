@@ -66,3 +66,19 @@ else{
 }
 }
 
+function handleOthers(){
+    var card = document.querySelector(".card");
+    var report = document.querySelector(".form-group");
+
+    if (card.style.display === "none"){
+        card.style.display = "block";
+      report.style.display = "block";
+    }
+    else{
+        card.style.display = "none";
+      report.style.display = "none";
+
+
+
+    }
+}
