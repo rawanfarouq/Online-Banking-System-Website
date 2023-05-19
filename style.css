@@ -1,0 +1,15 @@
+
+
+.vertical-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adjust the desired gap between buttons */
+}
+
+.vertical-buttons button {
+  width: 300px; /* Adjust the desired width of the buttons */
+  height: 40px; /* Adjust the desired height of the buttons */
+  /* Add any other desired button styles here */
+}
+
+
