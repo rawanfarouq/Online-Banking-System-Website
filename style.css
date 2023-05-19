@@ -2,6 +2,7 @@
     
         position: absolute;
         left: 500px;
+        color:blue
       
 }
 
@@ -16,11 +17,61 @@
 .Name{
 
     position: fixed;
-    top: 200px;
+    top: 226px;
     margin: 15px;
     font-size: 20px;
 }
 
 .Credit_Number{
-    
+    position: fixed;
+    top: 300px;
+    margin: 15px;
+    font-size: 20px;
 }
+
+.Amount{
+    position: fixed;
+    top: 380px;
+    margin: 15px;
+    font-size: 20px;
+}
+
+.Reason{
+    position: fixed;
+    top: 600px;
+    margin: 15px;
+    font-size: 20px;
+}
+
+.Option1{
+    position: fixed;
+    top: 160px;
+    margin: 15px;
+    font-size: 20px;
+    color: crimson;
+}
+
+.Option{
+    position: fixed;
+    top: 190px;
+    margin: 15px;
+    font-size: 20px;
+}
+
+.Bank_Name{
+
+    position: fixed;
+    top: 450px;
+    margin: 15px;
+    font-size: 20px;
+
+}
+
+.Country{
+
+    position: fixed;
+    top: 519px;
+    margin: 15px;
+    font-size: 20px;
+}
+
