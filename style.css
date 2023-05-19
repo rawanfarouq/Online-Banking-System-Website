@@ -24,3 +24,9 @@
 .Credit_Number{
     
 }
+
+.SignUp{
+  position: fixed;
+  top: 150px;
+  font-size: 20px;
+}
