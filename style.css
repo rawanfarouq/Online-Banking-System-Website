@@ -1,0 +1,26 @@
+.TransferMoney{
+    
+        position: absolute;
+        left: 500px;
+      
+}
+
+.Balance{
+
+ position: fixed;
+  top: 105px;
+  left: 10;
+  margin: 20px; /* Adjust this value for spacing if needed */  
+}
+
+.Name{
+
+    position: fixed;
+    top: 200px;
+    margin: 15px;
+    font-size: 20px;
+}
+
+.Credit_Number{
+    
+}
