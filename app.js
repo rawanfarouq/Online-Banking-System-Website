@@ -73,6 +73,7 @@ function removeSelectedItem() {
   if (selectedIndex !== -1) {
     dropdown.remove(selectedIndex);
   }
+}
 function currentAccountDetails() {
 
     var container = document.getElementById("accountDetails");
@@ -254,6 +255,5 @@ if(document.getElementById("firstName").value=="" || document.getElementById("la
 }
 else{
     alert('Loan Successful')
-}
 }
 }
