@@ -247,6 +247,23 @@ function handleInternal() {
       country.style.display="none";
     }
   }
+
+  function handleOthers(){
+    var card = document.querySelector(".card");
+    var report = document.querySelector(".form-group");
+
+    if (card.style.display === "none"){
+        card.style.display = "block";
+      report.style.display = "block";
+    }
+    else{
+        card.style.display = "none";
+      report.style.display = "none";
+
+
+
+    }
+}
    
 
 function carLoanCredentials (){
@@ -255,5 +272,25 @@ if(document.getElementById("firstName").value=="" || document.getElementById("la
 }
 else{
     alert('Loan Successful')
+  }
 }
+
+function loginCredentials() {
+  if (document.getElementById("Username").value == "client" && document.getElementById("Password").value == "client") {
+    window.location.assign('Accounts.html');
+  } else if (document.getElementById("Username").value == "admin" && document.getElementById("Password").value == "admin") {
+    window.location.assign('admin.html');
+  } else if (document.getElementById("Username").value == "banker" && document.getElementById("Password").value == "banker") {
+    window.location.assign('banker.html');
+  }
+}
+
+
+function signUp(){
+  if(document.getElementById("SignUpUsername").value=="" || document.getElementById("SignUpPassword").value=="" ){
+      alert('Please enter valid credentials')
+  }
+  else{
+    location.replace('/Login.html');
+  }
 }
