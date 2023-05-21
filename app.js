@@ -96,8 +96,8 @@ function currentAccountDetails() {
     newLabel2.style = "font-size: 20px;"
     newLabel2.id = "currentAccountBalance"
 
-    var newLabel3 = document.createElement("button");
-    newLabel3.innerHTML = '<button type="button" class="btn btn-danger" onclick="alert()">Delete Account</button>'
+   //var newLabel3 = document.createElement("button");
+    //newLabel3.innerHTML = '<button type="button" class="btn btn-danger" onclick="alert()">Delete Account</button>'
 
 
     
@@ -105,7 +105,7 @@ function currentAccountDetails() {
     newContainer.appendChild(newLabel);
     newContainer.appendChild(newLabel2);
     newContainer.appendChild(lineBreak);
-    newContainer.appendChild(newLabel3);
+    //newContainer.appendChild(newLabel3);
     
   
   
@@ -132,14 +132,14 @@ function savingsAccountDetails() {
     newLabel2.style = "font-size: 20px;"
     newLabel2.id = "currentAccountBalance"
 
-    var newLabel3 = document.createElement("button");
-    newLabel3.innerHTML = '<button type="button" class="btn btn-danger" onclick="alert()">Delete Account</button>'
+   // var newLabel3 = document.createElement("button");
+    //newLabel3.innerHTML = '<button type="button" class="btn btn-danger" onclick="alert()">Delete Account</button>'
     
     var newContainer = document.createElement("div");
     newContainer.appendChild(newLabel);
     newContainer.appendChild(newLabel2);
     newContainer.appendChild(lineBreak);
-    newContainer.appendChild(newLabel3);
+    //newContainer.appendChild(newLabel3);
     
   
   
@@ -162,18 +162,18 @@ function newAccountDetails() {
     newLabel.style = "font-size: 20px;"
 
     var newLabel2 = document.createElement("label");
-    newLabel2.textContent = " ZERO EGP, ya fa2eer";
+    newLabel2.textContent = " ZERO EGP";
     newLabel2.style = "font-size: 20px;"
     newLabel2.id = "currentAccountBalance"
 
-    var newLabel3 = document.createElement("button");
-    newLabel3.innerHTML = '<button type="button" class="btn btn-danger" onclick="alert()">Delete Account</button>'
+    //var newLabel3 = document.createElement("button");
+    //newLabel3.innerHTML = '<button type="button" class="btn btn-danger" onclick="alert()">Delete Account</button>'
     
     var newContainer = document.createElement("div");
     newContainer.appendChild(newLabel);
     newContainer.appendChild(newLabel2);
     newContainer.appendChild(lineBreak);
-    newContainer.appendChild(newLabel3);
+    //newContainer.appendChild(newLabel3);
     
   
   
@@ -186,10 +186,24 @@ function addBankAccount() {
     var dropDown = document.getElementById("accountsDropDownMenu")
     
     var newAccount = document.createElement("a")
-    newAccount.innerHTML = '<a class="dropdown-item" onclick="newAccountDetails()"> New Account</a>'
+    //newAccount.innerHTML = '<a class="dropdown-item" onclick="newAccountDetails()"> New Account</a>'
+    newAccount.className = "dropdown-item"
+    newAccount.onclick = "newAccountDetails()"
+    newAccount.textContent = "New Account"
     dropDown.appendChild(newAccount)
 }
 
+function closeAccount(name){
+  var dropDown = document.getElementById("accountsDropDownMenu")
+  var dropdownItems = document.getElementsByClassName('dropdown-item');
+  for (var i = 0; i < dropdownItems.length; i++) {
+    
+    if (dropdownItems[i].textContent === name) {
+      dropDown.removeChild(dropdownItems[i]);
+      break;
+    }
+  }
+}
 
 function handleInternal() {
     var nameDiv = document.querySelector(".Name");
