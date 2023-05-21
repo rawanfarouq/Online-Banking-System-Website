@@ -1,4 +1,11 @@
-
+nav {
+    display: flex;
+    flex-direction: column; /* Set the direction to vertical */
+    padding: 10px;
+    position: fixed;
+    left: 0; /* Align the navbar to the left */
+    top: 0; /* Position the navbar at the top of the page */
+  }
 
 
 .vertical-buttons {
