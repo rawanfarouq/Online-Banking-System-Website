@@ -156,8 +156,9 @@ nav {
 
 .Report{
     position: absolute;
+        top: 50px;
         left: 500px;
-        color:rgb(255, 0, 0)
+        color:rgba(160, 28, 28, 0.888)
 }
 
 .alert{
@@ -183,4 +184,41 @@ nav {
     margin: 15px;
     font-size: 20px;
 }
+
+#myNavbar {
+    position: fixed;
+    top: 10px;
+    left: 0px;
+  }
+
+  #myAlert {
+    position: absolute;
+    top: 120px;
+    left: 0;
+  }
+
+  #myEmail{
+    position: absolute;
+    top: 180px;
+    left: 0;
+  }
+
+  #myCredit{
+    position: absolute;
+    top: 265px;
+    left: 150px;
+  }
+
+  #myApply{
+    position: absolute;
+    top: 310px;
+    left: 150px;
+  }
+
+  #myNotification{
+    position: absolute;
+    top: 310px;
+    left: 150px;
+  }
+  
 

@@ -324,6 +324,23 @@ function handleInternal() {
     }
 }
 
+function handleSend(){
+  var emailInput = document.getElementById("emailInput");
+
+  if (emailInput.value==""){
+    alert("Something is empty");
+  }
+  else{
+    alert("Report request is sent successfully");
+  }
+}
+
+function handleNotify() {
+  var notificationAlert = document.getElementById("myNotification");
+  notificationAlert.style.display = "block";
+}
+
+
 function handleEnterInternal() {
   var nameInput = document.getElementById("nameInput");
   var creditCardInput = document.getElementById("creditCardInput");
@@ -380,6 +397,59 @@ function handleEnterInternational() {
     alert("International Money Transfer request is sent");
   }
 }
+
+function handleCredit() {
+  var creditDiv = document.getElementById("myCredit");
+  if (creditDiv.style.display === "none") {
+    creditDiv.style.display = "block";
+  } else {
+    creditDiv.style.display = "none";
+  }
+  
+  // Enable all buttons
+  var theftBtn = document.getElementById("theftBtn");
+  var lossBtn = document.getElementById("lossBtn");
+  var damageBtn = document.getElementById("damageBtn");
+  
+  theftBtn.disabled = false;
+  lossBtn.disabled = false;
+  damageBtn.disabled = false;
+}
+
+function handleTheft() {
+  var theftBtn = document.getElementById("theftBtn");
+  var myApply= document.getElementById("myApply");
+  theftBtn.disabled = true;
+  if (myApply.style.display === "none") {
+    myApply.style.display = "block";
+  } else {
+    myApply.style.display = "none";
+  }
+
+}
+
+function handleLoss() {
+  var lossBtn = document.getElementById("lossBtn");
+  var myApply= document.getElementById("myApply");
+  lossBtn.disabled = true;
+  if (myApply.style.display === "none") {
+    myApply.style.display = "block";
+  } else {
+    myApply.style.display = "none";
+  }
+}
+
+function handleDamage() {
+  var damageBtn = document.getElementById("damageBtn");
+  var myApply= document.getElementById("myApply");
+  damageBtn.disabled = true;
+  if (myApply.style.display === "none") {
+    myApply.style.display = "block";
+  } else {
+    myApply.style.display = "none";
+  }
+}
+
 
 function redirectToReport() {
   window.location.href = "Report.html";
