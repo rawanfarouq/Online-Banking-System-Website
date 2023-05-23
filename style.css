@@ -220,5 +220,42 @@ nav {
     top: 310px;
     left: 150px;
   }
+  .dropdownandbutton {
+    position: absolute;
+    height: 650px;
+    top: 220px;
+    left: 350px;
+    zoom: 1.2;
+}
+.reminders{
+    position: absolute;
+    height: 650px;
+    top: 250px;
+    left: 350px;
+    font-size: 25px;
+}
+.reminderButton{
+    margin: 10px;
+}
+.paybillbutton{
+    margin: 10px;
+    zoom: 1.2;
+}
+.billsHeading{
+    position: absolute;
+    color: rgb(11, 10, 74);
+    top: 140px;
+    left:12cm  
+}
+.reminderTitle{
+    position: absolute;
+    color: rgb(11, 10, 74);
+    top: 140px;
+    left:10cm  
+}
+#myDropdown option {
+    font-size: 20px; /* Adjust the value as needed */
+  }
+
   
 
