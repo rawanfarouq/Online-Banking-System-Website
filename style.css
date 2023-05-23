@@ -24,11 +24,54 @@ nav {
 
 .TransferMoney{
     
-        position: absolute;
-        left: 500px;
-        color:blue
-      
+    font-family:"Franklin Gothic Medium", sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    position: absolute;
+    left: 600px;
+    top: 12px;
+    color:rgb(18, 51, 53)   
+  
 }
+
+.World{
+        
+    position: absolute;
+    left: 110px;
+    top: 200px;
+    color:rgb(18, 51, 53)
+}
+
+.container {
+    position: relative;
+  }
+  
+  #myCard {
+    position: absolute;
+    top: 170px;
+    left: 900px;
+  }
+
+ 
+.Customer{
+    position: absolute;
+    top: 321px;
+    left: 170px;
+    font-size: 20px;
+} 
+
+.Start{
+    position: absolute;
+    top: 321px;
+    left: 110px;
+    font-size: 20px;
+}
+
+.TransferOption{
+    font-size: larger;
+    color:rgb(7, 10, 106)
+    
+} 
 
 .Balance{
 
@@ -40,9 +83,16 @@ nav {
 
 .Name{
 
-    position: fixed;
-    top: 226px;
-    margin: 15px;
+    position: absolute;
+    top: 0.2px;
+    margin: 1px;
+    font-size: 20px;
+}
+
+.Credit_Number{
+    position: absolute;
+    top:70px;
+    margin: 1px;
     font-size: 20px;
 }
 
@@ -58,15 +108,16 @@ nav {
 }
 
 .Amount{
-    position: fixed;
-    top: 380px;
-    margin: 15px;
+    position: absolute;
+    top: 140px;
+    margin: 1px;
     font-size: 20px;
 }
 
 .Reason{
-    position: fixed;
-    top: 600px;
+    position: absolute;
+    top: 290px;
+    right: 320px;
     margin: 15px;
     font-size: 20px;
 }
@@ -88,18 +139,18 @@ nav {
 
 .Bank_Name{
 
-    position: fixed;
-    top: 450px;
-    margin: 15px;
+    position: absolute;
+    top: 210px;
+    margin: 1px;
     font-size: 20px;
 
 }
 
 .Country{
 
-    position: fixed;
-    top: 519px;
-    margin: 15px;
+    position: absolute;
+    top: 290px;
+    margin: 1px;
     font-size: 20px;
 }
 

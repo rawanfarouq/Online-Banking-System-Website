@@ -206,19 +206,32 @@ function closeAccount(name){
 }
 
 function handleInternal() {
-    var nameDiv = document.querySelector(".Name");
-    var creditNumberDiv = document.querySelector(".Credit_Number");
-    var amountDiv = document.querySelector(".Amount");
+  var nameDiv = document.querySelector(".Name");
+  var creditNumberDiv = document.querySelector(".Credit_Number");
+  var amountDiv = document.querySelector(".Amount");
+  var container1 = document.getElementById("container1");
+  var enterInternalBtn = document.getElementById("enterInternalBtn");
+  var enterDomesticBtn = document.getElementById("enterDomesticBtn");
+  var enterInternationalBtn = document.getElementById("enterInternationalBtn");
   
-    if (nameDiv.style.display === "none") {
-      nameDiv.style.display = "block";
-      creditNumberDiv.style.display = "block";
-      amountDiv.style.display = "block";
-    } else {
-      nameDiv.style.display = "none";
-      creditNumberDiv.style.display = "none";
-      amountDiv.style.display = "none";
-    }
+  enterInternalBtn.style.display = "block";
+  enterDomesticBtn.style.display = "none";
+  enterInternationalBtn.style.display = "none";
+  
+  if (container1.style.display === "none") {
+    // Show container1 and its child elements
+    container1.style.display = "block";
+    nameDiv.style.display = "block";
+    creditNumberDiv.style.display = "block";
+    amountDiv.style.display = "block";
+    
+
+  } else {
+    // Hide container1 and its child elements
+    container1.style.display = "none";
+    nameDiv.style.display = "none";
+    creditNumberDiv.style.display = "none";
+    amountDiv.style.display = "none";
   }
   
   function handleDomestic() {
@@ -226,34 +239,66 @@ function handleInternal() {
     var creditNumberDiv = document.querySelector(".Credit_Number");
     var amountDiv = document.querySelector(".Amount");
     var bankName = document.querySelector(".Bank_Name");
+    var container1 = document.getElementById("container1");
+    var enterInternalBtn = document.getElementById("enterInternalBtn");
+    var enterDomesticBtn = document.getElementById("enterDomesticBtn");
+    var enterInternationalBtn = document.getElementById("enterInternationalBtn");
+    
+    enterInternalBtn.style.display = "none";
+    enterDomesticBtn.style.display = "block";
+    enterInternationalBtn.style.display = "none";
+  
   
     if (nameDiv.style.display === "none") {
+      container1.style.display = "block";
       nameDiv.style.display = "block";
       creditNumberDiv.style.display = "block";
       amountDiv.style.display = "block";
       bankName.style.display="block";
     } else {
+      container1.style.display = "none";
       nameDiv.style.display = "none";
       creditNumberDiv.style.display = "none";
       amountDiv.style.display = "none";
       bankName.style.display="none";
     }
+  
   }
   
-  function handleInternational() {
+  }
+
+  
+  function handleStart() {
+    var container = document.getElementById("container");
+    container.style.display = "block";
+  }
+
+
+  
+ function handleInternational() {
     var nameDiv = document.querySelector(".Name");
     var creditNumberDiv = document.querySelector(".Credit_Number");
     var amountDiv = document.querySelector(".Amount");
     var bankName = document.querySelector(".Bank_Name");
     var country = document.querySelector(".Country");
+    var container1 = document.getElementById("container1");
+    var enterInternalBtn = document.getElementById("enterInternalBtn");
+  var enterDomesticBtn = document.getElementById("enterDomesticBtn");
+  var enterInternationalBtn = document.getElementById("enterInternationalBtn");
+  
+  enterInternalBtn.style.display = "none";
+  enterDomesticBtn.style.display = "none";
+  enterInternationalBtn.style.display = "block";
   
     if (nameDiv.style.display === "none") {
+      container1.style.display = "block";
       nameDiv.style.display = "block";
       creditNumberDiv.style.display = "block";
       amountDiv.style.display = "block";
       bankName.style.display="block";
       country.style.display="block";
     } else {
+      container1.style.display = "none";
       nameDiv.style.display = "none";
       creditNumberDiv.style.display = "none";
       amountDiv.style.display = "none";
@@ -278,6 +323,69 @@ function handleInternal() {
 
     }
 }
+
+function handleEnterInternal() {
+  var nameInput = document.getElementById("nameInput");
+  var creditCardInput = document.getElementById("creditCardInput");
+  var amountInput = document.getElementById("amountInput");
+  
+  if (nameInput.value === "") {
+    alert("Name is required!");
+  } else if (creditCardInput.value === "") {
+    alert("Bank Account Number is required!");
+  } else if (amountInput.value === "") {
+    alert("Amount is required!");
+  } else {
+    alert("Internal Money Transfer request is sent");
+  }
+}
+
+function handleEnterDomestic() {
+  var nameInput = document.getElementById("nameInput");
+  var creditCardInput = document.getElementById("creditCardInput");
+  var amountInput = document.getElementById("amountInput");
+  var bankNameInput = document.getElementById("bankNameInput");
+  
+  if (nameInput.value === "") {
+    alert("Name is required!");
+  } else if (creditCardInput.value === "") {
+    alert("Bank Account Number is required!");
+  } else if (amountInput.value === "") {
+    alert("Amount is required!");
+  } else if (bankNameInput.value === "") {
+    alert("Bank Name is required!");
+  } else {
+    alert("Domestic Money Transfer request is sent");
+  }
+}
+
+function handleEnterInternational() {
+  var nameInput = document.getElementById("nameInput");
+  var creditCardInput = document.getElementById("creditCardInput");
+  var amountInput = document.getElementById("amountInput");
+  var bankNameInput = document.getElementById("bankNameInput");
+  var countryInput = document.getElementById("countryInput");
+  
+  if (nameInput.value === "") {
+    alert("Name is required!");
+  } else if (creditCardInput.value === "") {
+    alert("Bank Account Number is required!");
+  } else if (amountInput.value === "") {
+    alert("Amount is required!");
+  } else if (bankNameInput.value === "") {
+    alert("Bank Name is required!");
+  } else if (countryInput.value === "") {
+    alert("Country is required!");
+  } else {
+    alert("International Money Transfer request is sent");
+  }
+}
+
+function redirectToReport() {
+  window.location.href = "Report.html";
+}
+
+
    
 
 function carLoanCredentials (){
