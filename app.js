@@ -236,6 +236,7 @@ function handleInternal() {
     creditNumberDiv.style.display = "none";
     amountDiv.style.display = "none";
   }
+}
   
   function handleDomestic() {
     var nameDiv = document.querySelector(".Name");
@@ -265,8 +266,6 @@ function handleInternal() {
       amountDiv.style.display = "none";
       bankName.style.display="none";
     }
-  
-  }
   
   }
 
@@ -488,4 +487,32 @@ function signUp(){
   else{
     location.replace('/Login.html');
   }
+}
+
+function handleOverview() {
+  // Toggle the display of the cards
+  var revenueCard = document.getElementById("myRevenue");
+  var revenue2Card = document.getElementById("myRevenue2");
+  var revenue3Card = document.getElementById("myRevenue3");
+  revenueCard.style.display = (revenueCard.style.display === "none") ? "block" : "none";
+  revenue2Card.style.display = (revenue2Card.style.display === "none") ? "block" : "none";
+  revenue3Card.style.display = (revenue3Card.style.display === "none") ? "block" : "none";
+}
+
+function handleTechnical(){
+  var technicalCard = document.getElementById("myTechnical");
+  var technical2Card = document.getElementById("myTechnical2");
+  var technica3lCard = document.getElementById("myTechnical3");
+  technicalCard.style.display = (technicalCard.style.display === "none") ? "block" : "none";
+  technical2Card.style.display = (technical2Card.style.display === "none") ? "block" : "none";
+  technica3lCard.style.display = (technica3lCard.style.display === "none") ? "block" : "none";
+}
+
+function handleCustomer(){
+  var myCustomer = document.getElementById("myCustomer");
+  var myCustomer2 = document.getElementById("myCustomer2");
+  var myCustomer3 = document.getElementById("myCustomer3");
+  myCustomer.style.display = (myCustomer.style.display === "none") ? "block" : "none";
+  myCustomer2.style.display = (myCustomer2.style.display === "none") ? "block" : "none";
+  myCustomer3.style.display = (myCustomer3.style.display === "none") ? "block" : "none";
 }

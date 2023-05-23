@@ -257,5 +257,89 @@ nav {
     font-size: 20px; /* Adjust the value as needed */
   }
 
+
+  #myAdminButton{
+    position: absolute;
+    top: 320px;
+    left: 6px;
+ } 
+
+ .AdminName{
+    position: absolute;
+    top: 244px;
+    left: 5px;
+    font-size: 25px;
+ }
+
+ .AdminEmail{
+    position: absolute;
+    top: 270px;
+    left: 5px;
+    font-size: 22px;
+ }
+
+ #myRevenue{
+    position: absolute;
+    top: 270px;
+    left: 210px;
+    font-size: 22px;
+ }
+
+ #myRevenue2{
+    position: absolute;
+    top: 270px;
+    left: 510px;
+    font-size: 22px;
+ }
+
+ #myRevenue3{
+    position: absolute;
+    top: 270px;
+    left: 810px;
+    font-size: 22px;
+ }
+
+ #myTechnical{
+    position: absolute;
+    top: 270px;
+    left: 210px;
+    font-size: 22px;
+ }
+
+ #myTechnical2{
+    position: absolute;
+    top: 270px;
+    left: 510px;
+    font-size: 22px;
+ }
+
+ #myTechnical3{
+    position: absolute;
+    top: 270px;
+    left: 810px;
+    font-size: 22px;
+ }
+
+ #myCustomer{
+    position: absolute;
+    top: 270px;
+    left: 210px;
+    font-size: 22px;
+ }
+
+ #myCustomer2{
+    position: absolute;
+    top: 270px;
+    left: 510px;
+    font-size: 22px;
+ }
+
+ #myCustomer3{
+    position: absolute;
+    top: 270px;
+    left: 810px;
+    font-size: 22px;
+ }
+ 
   
 

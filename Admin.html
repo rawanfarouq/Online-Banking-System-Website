@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url('Background_Logo_ِAdmin.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="myNavbar">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="Home.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Accounts.html">Your Accounts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="creditcard.html">Credit Cards</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Others
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="bills.html">Bills</a>
+                <a class="dropdown-item" href="loan.html">Loans</a>
+                <a class="dropdown-item" href="reminders.html">Reminders</a>
+                
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <h1 class="AdminName" > Rebooters Admin <span class="badge badge-secondary"></span></h1>
+      <h2 class="AdminEmail" > admin@yahoo.com <span class="badge badge-secondary"></span></h2>
+
+
+        <div class="btn-group-vertical"role="group" aria-label="First group" id="myAdminButton">
+          <button type="button" class="btn btn-secondary" onclick="handleOverview()">Overview</button>
+          <button type="button" class="btn btn-secondary" onclick="handleTechnical()">Technical Issues</button>
+          <button type="button" class="btn btn-secondary"onclick="handleCustomer()">Customer Issues</button>
+        </div>
+
+        <div class="card border-info mb-3" style="max-width: 18rem; display: none;" id="myRevenue">
+            <div class="card-header"><strong>Monthly Revenue Report</strong></div>
+
+            <div class="card-body">
+              <p class="card-text">The bank's total revenue for the month of May reached $5.2 million, showing a 10% increase compared to the previous month. .</p>
+            </div>
+          </div>
+
+          <div class="card border-info mb-3" style="max-width: 18rem; display: none;" id="myRevenue2">
+            <div class="card-header"><strong>Net Profit Update</strong></div>
+            <div class="card-body">
+              <p class="card-text">We are pleased to announce that the bank achieved a net profit of $1.8 million for the month of May. This represents a 15% increase compared to the previous month.</p>
+            </div>
+          </div> 
+
+          <div class="card border-info mb-3" style="max-width: 18rem; display: none;" id="myRevenue3">
+            <div class="card-header"><strong>Notifications</strong></div>
+            <div class="card-body">
+              <p class="card-text">There will be a system upgrade briefing scheduled for tomorrow at 10:00 AM in the conference room.</p>
+            </div>
+          </div> 
+
+          <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; display: none;" id="myTechnical">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Server Downtime</strong></h5>
+              <p class="card-text">Urgent! The bank's main server is currently down due to a power outage. IT team is actively working to restore services. Estimated downtime: 2 hours.</p>
+              <a href="#" class="card-link"onclick="alert('Request is Accepted')">Accept</a>
+              <a href="#" class="card-link"onclick="alert('Request is Rejected')">Reject</a>
+            </div>
+          </div>
+
+          <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; display: none;" id="myTechnical2">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Application Crash</strong></h5>
+              <p class="card-text">Alert! The banking application has encountered a critical error and crashed for a small subset of users. Development team is investigating the issue and working on a fix.</p>
+              <a href="#" class="card-link"onclick="alert('Request is Accepted')">Accept</a>
+              <a href="#" class="card-link"onclick="alert('Request is Rejected')">Reject</a>
+            </div>
+          </div>
+
+          <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; display: none;" id="myTechnical3">
+            <div class="card-body">
+              <h5 class="card-title"><strong>ATM Outage</strong></h5>
+              <p class="card-text">Attention! One of the ATMs located at our downtown branch is currently out of service. Customers will not be able to withdraw cash or perform any transactions using this ATM until the issue is resolved.  </p>
+              <a href="#" class="card-link"onclick="alert('Request is Accepted')">Accept</a>
+              <a href="#" class="card-link"onclick="alert('Request is Rejected')">Reject</a>
+            </div>
+          </div>
+
+          <div class="card text-white bg-dark mb-3" style="max-width: 18rem; display: none;"  id="myCustomer">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Failed Transaction </strong></h5>
+              <p class="card-text">A customer has reported a failed transaction while attempting to withdraw $100 .</p>
+              <a href="#" class="card-link"onclick="alert('Request is Accepted')">Accept</a>
+              <a href="#" class="card-link"onclick="alert('Request is rejected')">Reject</a>
+            </div>
+          </div>
+
+          <div class="card text-white bg-dark mb-3" style="max-width: 18rem; display: none;"  id="myCustomer2">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Credit Card Lost </strong></h5>
+              <p class="card-text"> A customer has notified us about a lost credit card.Please deactivate the credit card linked to their account and initiate the necessary procedures to issue a replacement card.</p>
+              <a href="#" class="card-link"onclick="alert('Request is Accepted')">Accept</a>
+              <a href="#" class="card-link"onclick="alert('Request is Rejected')">Reject</a>
+            </div>
+          </div>
+
+          <div class="card text-white bg-dark mb-3" style="max-width: 18rem; display: none;"  id="myCustomer3">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Problem in Creating New Account </strong></h5>
+              <p class="card-text"> A customer encountered difficulties while attempting to create a new bank account online.</p>
+              <a href="#" class="card-link" onclick="alert('Request is Accepted')">Accept</a>
+              <a href="#" class="card-link"onclick="alert('Request is Rejected')">Reject</a>
+            </div>
+          </div>
+
+
+
+</body>
+</html>

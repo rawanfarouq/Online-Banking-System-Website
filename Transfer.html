@@ -49,12 +49,27 @@
             <a class="dropdown-item" href="loan.html">Loans</a>
             <a class="dropdown-item" href="reminders.html">Reminders</a>
             <a class="dropdown-item" onclick="handleNotify()" href="#">Notifications</a>
-            <a class="dropdown-item" href="Report.html">Report Issues</a>
+            
           </div>
         </li>
       </ul>
     </div>
   </nav>
+
+  <div class="alert alert-success alert-dismissible fade show" role="alert" id="myNotification" style="display: none;">
+    <strong>Notifications!</strong><br> -Loan Accepted.<br>
+    -You transferred to an Account 1827372837 : 12,000 EGP <br>
+    -Credit Card Accepted <br>
+    -Bill Payment Accepted <br>
+    -Loan Accepted <br>
+    -Payed 1000 EGP on Noon, Left Balance=4000 EGP <br>
+    -Redeemed 200 points <br>
+    -The issue you reported got resolved
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
 
       <h1 class="TransferMoney" > Transfer Money <span class="badge badge-secondary"></span></h1>
 
@@ -121,6 +136,8 @@
               <button id="enterDomesticBtn" type="button" onclick="handleEnterDomestic()" class="btn btn-primary" style="display: none;">Enter Domestic</button>
               <button id="enterInternationalBtn" type="button" onclick="handleEnterInternational()" class="btn btn-primary" style="display: none;">Enter International</button>
             </div>
+
+            
 
 
             
