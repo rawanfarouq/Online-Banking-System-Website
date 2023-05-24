@@ -457,7 +457,9 @@ function redirectToReport() {
   window.location.href = "Report.html";
 }
 
-
+function redirectToSign(){
+  window.location.href = "signUp.html";
+}
    
 
 function carLoanCredentials (){
@@ -515,4 +517,22 @@ function handleCustomer(){
   myCustomer.style.display = (myCustomer.style.display === "none") ? "block" : "none";
   myCustomer2.style.display = (myCustomer2.style.display === "none") ? "block" : "none";
   myCustomer3.style.display = (myCustomer3.style.display === "none") ? "block" : "none";
+}
+
+function toggleNotification() {
+  var notification = document.getElementById("myNotification1");
+  if (notification.style.display === "none") {
+    notification.style.display = "block";
+  } else {
+    notification.style.display = "none";
+  }
+}
+
+function toggleReminder(){
+  var reminder = document.getElementById("myReminder1");
+  if (reminder.style.display === "none") {
+    reminder.style.display = "block";
+  } else {
+    reminder.style.display = "none";
+  }
 }

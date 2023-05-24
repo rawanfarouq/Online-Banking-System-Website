@@ -342,4 +342,114 @@ nav {
  }
  
   
+ #myHome{
+
+  position: absolute;
+    top: 7px;
+    left: 460px;
+    font-size: 20px;
+    
+ } 
+ 
+ #myHome2{
+  position: absolute;
+    top: 7px;
+    left: 580px;
+    font-size: 18px;
+ }
+
+ #myHome3{
+  position: absolute;
+    top: 7px;
+    left: 758px;
+    font-size: 18px;
+ }
+
+ #myHome4{
+  position: absolute;
+  top: 7px;
+  left: 860px;
+  font-size: 18px;
+ }
+
+ #myHome5{
+  position: absolute;
+  top: 7px;
+  left: 990px;
+  font-size: 18px;
+ }
+
+ #myLogin{
+  position: absolute;
+  top: 2px;
+  left: 1200px;
+  font-size: 22px;
+ }
+
+ .head{
+  position: absolute;
+    top: 200px;
+    left: 800px;
+    font-size: 35px;
+    color: aliceblue;
+ }
+
+ #myCard2{
+    position: absolute;
+    top: 200px;
+    left: 200px;
+ }
+
+ .head2{
+  position: absolute;
+    top: 680px;
+    left: 490px;
+    font-size: 28px;
+    color: aliceblue;
+ }
+
+ #myProfile{
+    position: absolute;
+    top: 260px;
+    left: 0px;
+ }
+
+ #v-pills-profile{
+  position: absolute;
+  top: 260px;
+  left: 390px;
+ }
+
+ #v-pills-messages{
+  position: absolute;
+  top: 300px;
+  left: 390px;
+ }
+
+#v-pills-settings{
+  position: absolute;
+  
+  left: 390px;
+}
+
+ .content-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.left-content {
+  flex-grow: 1;
+}
+
+.right-content {
+  flex-grow: 1;
+}
+
+
+
+
+
+  
+
 

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body {
+          background-image: url('Background_Logo_ِAdmin.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+        </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="myNavbar">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="Home.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Report.html">Report Issues</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="toggleNotification()">Notifications</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="toggleReminder()">Reminders</a>
+              </li>  
+            
+            
+          </ul>
+        </div>
+      </nav>
+
+      <div class="alert alert-success alert-dismissible fade show" role="alert" id="myNotification1" style="display: none;">
+        <strong>Notifications!</strong>
+        <br> Notification: Pending Requests<br>
+        This is to inform you that there are pending approval requests that require your attention. Please review and take appropriate action on the requests.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="alert alert-success alert-dismissible fade show" role="alert" id="myReminder1" style="display: none; position: absolute; top: 400px; left: 20px;">
+        <strong>Reminders!</strong>
+        <br> Reminder: Team Meeting<br>
+        Subject: Monthly Performance Review Meeting <br>
+        Date: 6/6/2023 <br>
+        Time: 10AM <br>
+        Location: Conference Room<br>
+        This is a reminder that our monthly performance review meeting is scheduled for 6/6/2023 at 10AM in the conference room. The meeting will cover key performance indicators, goals, and targets for the current month.
+        <br>
+        Please come prepared with your reports and any updates or insights you would like to share. Your active participation is highly appreciated.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+        <div class="col-3"id="myProfile">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><strong>Profile</strong></a>
+            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><strong>Accounts Overivew</strong></a>
+            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"><strong>Requests</strogn></a>
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">Rebooters <br> Email: rebooters_banker@gmail.com</div>
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                <div class="content-container">
+                  <div class="left-content">
+                    <p>1.Customer Name: Mina Tamer</p>
+                    <p>-Account Type: Checking Account</p>
+                    <p>-Account Number: XXXX-XXXX-XXXX-1234</p>
+                    <p>-Current Balance: $5,000</p>
+                    <p>-Available Balance: $4,500</p>
+                    <p>-Last Transaction: Deposit - $1,000 on 2023-05-15</p>
+                  </div>
+                  <div class="right-content">
+                    <p>2.Customer Name: Shahd Sharaf</p>
+                    <p>-Account Type: Saving Account</p>
+                    <p>-Account Number: XXXX-XXXX-XXXX-5678</p>
+                    <p>-Current Balance: $10,000</p>
+                    <p>-Available Balance: $9,800</p>
+                    <p>-Last Transaction: Withdrawal - $200 on 2023-05-18</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-start align-self-start">
+                  <div class="card border-dark mb-3" style="width: 18rem; height: 18rem;">
+                    <div class="card-body" id="BankerRequest">
+                      <h5 class="card-title"><strong>Request for Loan Approval:</strong></h5>
+                      <p class="card-text">Customer Name: Bassel Tharwat <br>
+                        Loan Amount: $50,000 <br>
+                        Loan Purpose: Home Renovation</p>
+                      <a href="#" class="card-link" onclick="alert('Accepted Successfully')">Accept</a>
+                      <a href="#" class="card-link" onclick="alert('Rejected Successfully')">Reject</a>
+                    </div>
+                  </div>
+                  <div class="card border-dark mb-3" style="width: 22rem; height: 22rem;">
+                    <div class="card-body" id="BankerRequest1">
+                      <h5 class="card-title"><strong>Request for Transfer Approval:</strong></h5>
+                      <p class="card-text">Customer Name: Sandy Waheed <br>
+                        Transfer Amount: $10,000 <br>
+                        Transfer From: Checking Account (Account Number: XXXX-XXXX-XXXX-1234) <br>
+                        Transfer To: Savings Account (Account Number: XXXX-XXXX-XXXX-5678)</p>
+                      <a href="#" class="card-link" onclick="alert('Accepted Successfully')">Accept</a>
+                      <a href="#" class="card-link" onclick="alert('Rejected Successfully')">Reject</a>
+                    </div>
+                  </div>
+                  <div class="card border-dark mb-3" style="width: 18rem;">
+                    <div class="card-body" id="BankerRequest2">
+                      <h5 class="card-title"><strong>Request for Credit Card Approval:</strong></h5>
+                      <p class="card-text">Customer Name: Rawan Farouq <br>
+                        Date of Birth: October 31, 2002 <br>
+                        Credit Limit Requested: $10,000 <br></p>
+                      <a href="#" class="card-link" onclick="alert('Accepted Successfully')">Accept</a>
+                      <a href="#" class="card-link" onclick="alert('Rejected Successfully')">Reject</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+          </div>
+        </div>
+        </div>
+
+
+</body>
+</html>
