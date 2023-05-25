@@ -662,4 +662,7 @@ function togglePastTransactions() {
   }
 }
 
+function TransferPager(){
+  window.location.href = "Transfer.html"
+}
 
