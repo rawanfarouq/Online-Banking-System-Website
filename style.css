@@ -292,11 +292,12 @@ nav {
  }
 
  #myRevenue3{
-    position: absolute;
-    top: 270px;
-    left: 810px;
-    font-size: 22px;
- }
+  position: absolute;
+  top: 200px;
+  left: 810px;
+  font-size: 22px;
+  width: 85rem;
+}
 
  #myTechnical{
     position: absolute;
@@ -537,6 +538,25 @@ nav {
   left: 515px;
 }
 
-  
+#SendProblem{
+  position: absolute;
+  top: 460px;
+  left: 15px;
+}
+
+#myNewNotification{
+  position: absolute;
+  top: 200px;
+  left: 650px;
+
+}
+
+#myNotification1{
+  position: absolute;
+  top: 60px;
+  left: 700px;
+  width: 50rem;
+  height: 18rem;
+}  
 
 

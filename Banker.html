@@ -50,6 +50,8 @@
         <strong>Notifications!</strong>
         <br> Notification: Pending Requests<br>
         This is to inform you that there are pending approval requests that require your attention. Please review and take appropriate action on the requests.
+        <br> -Issue Resolved - Account Opening Process:the issue related to the account opening process has been successfully resolved.
+        <br>The updated loan interest rates that have come into effect as of 10/8/2023. The changes aim to provide our customers with more competitive rates and better borrowing options.
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -72,9 +74,9 @@
 
         <div class="col-3"id="myProfile">
           <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><strong>Profile</strong></a>
-            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><strong>Accounts Overivew</strong></a>
-            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"><strong>Requests</strogn></a>
+            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false" onclick="toggleProfile()"><strong>Profile</strong></a>
+            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false" onclick="toggleOverview()"><strong>Accounts Overivew</strong></a>
+            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"onclick="toggleRequests()"><strong>Requests</strogn></a>
           </div>
         </div>
         <div class="col-9">

@@ -666,3 +666,34 @@ function TransferPager(){
   window.location.href = "Transfer.html"
 }
 
+function handleNewNotify(){
+  var notificationAlert = document.getElementById("myNewNotification");
+  notificationAlert.style.display = "block";
+}
+
+function toggleProfile() {
+  var profileTab = document.getElementById("v-pills-profile");
+  if (profileTab.style.display === "none") {
+    profileTab.style.display = "block";
+  } else {
+    profileTab.style.display = "none";
+  }
+}
+
+function toggleOverview(){
+  var profileTab = document.getElementById("v-pills-messages");
+  if (profileTab.style.display === "none") {
+    profileTab.style.display = "block";
+  } else {
+    profileTab.style.display = "none";
+  }
+}
+
+function toggleRequests(){
+  var profileTab = document.getElementById("v-pills-settings");
+  if (profileTab.style.display === "none") {
+    profileTab.style.display = "block";
+  } else {
+    profileTab.style.display = "none";
+  }
+}
