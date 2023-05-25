@@ -228,10 +228,9 @@ nav {
     zoom: 1.2;
 }
 .reminders{
-    position: absolute;
-    height: 650px;
-    top: 250px;
-    left: 350px;
+    position: absolute; 
+    top: 225px;
+    left: 150px;
     font-size: 25px;
 }
 .reminderButton{
@@ -250,8 +249,8 @@ nav {
 .reminderTitle{
     position: absolute;
     color: rgb(11, 10, 74);
-    top: 140px;
-    left:10cm  
+    top: 70px;
+    left:10px;  
 }
 #myDropdown option {
     font-size: 20px; /* Adjust the value as needed */
@@ -446,9 +445,97 @@ nav {
   flex-grow: 1;
 }
 
+#myNotification5{
+  position: absolute;
+    top: 310px;
+    left: 650px;
+}
 
+#dropdownMenuLink{
+  position: absolute;
+    top: 30px;
+    left: 50px;
+}
 
+#ButtonAccount{
+  position:absolute;
+  top: 90px;
+}
 
+#accountDetails1{
+  position:absolute;
+  top: 240px;
+  left: 280px;
+  width:18rem;
+}
+
+#accountDetails2{
+  position:absolute;
+  top: 240px;
+  left: 580px;
+  width:18rem;
+}
+
+#accountDetails3{
+  position:absolute;
+  top: 240px;
+  left: 880px;
+  width:18rem;
+}
+
+#newAccountForm{
+  position: absolute;
+  top: 350px;
+  left: 200px;
+}
+
+#newAccountForm2{
+  position: absolute;
+  top: 390px;
+  left: 210px;
+}
+
+#myNotification8{
+  position: absolute;
+  top: 90px;
+  left: 850px;
+}
+
+#confirm{
+  position: absolute;
+  top: 0px;
+  left: 230px;
+}
+
+#accountLogo{
+  position: absolute;
+  top: 100px;
+  left: 15px;
+}
+
+#buttonLogOut{
+  position: absolute;
+  top: 210px;
+  left: 54px;
+}
+
+#accountFlex{
+  position: absolute;
+  top: 270px;
+  left: 15px;
+}
+
+#AccountInfo{
+  position: absolute;
+  top: 260px;
+  left: 215px;
+}
+
+#BillingInfo{
+  position: absolute;
+  top: 260px;
+  left: 515px;
+}
 
   
 

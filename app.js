@@ -78,78 +78,34 @@ function removeSelectedBill() {
 }
 
 function currentAccountDetails() {
-
-    var container = document.getElementById("accountDetails");
-
-  // Get the last child element and remove it
-    var lastChild = container.lastChild;
-    container.removeChild(lastChild);
-
-    var lineBreak = document.createElement("br");
-
-    var newScript = document.createElement("script");
-    newScript.textContent = 'onclick="alert("hello")"';
-
-    var newLabel = document.createElement("label");
-    newLabel.textContent = "Current Account Balance :";
-    newLabel.style = "font-size: 20px;"
-
-    var newLabel2 = document.createElement("label");
-    newLabel2.textContent = " 10,000 EGP";
-    newLabel2.style = "font-size: 20px;"
-    newLabel2.id = "currentAccountBalance"
-
-   //var newLabel3 = document.createElement("button");
-    //newLabel3.innerHTML = '<button type="button" class="btn btn-danger" onclick="alert()">Delete Account</button>'
-
-
-    
-    var newContainer = document.createElement("div");
-    newContainer.appendChild(newLabel);
-    newContainer.appendChild(newLabel2);
-    newContainer.appendChild(lineBreak);
-    //newContainer.appendChild(newLabel3);
-    
-  
-  
-    // Add the new element to the container
-    var container = document.getElementById("accountDetails");
-    container.appendChild(newContainer);
+  var accountDetailsCard = document.getElementById("accountDetails1");
+  if (accountDetailsCard.style.display === "none") {
+    accountDetailsCard.style.display = "block";
+  }
+  else{
+    accountDetailsCard.style.display = "none";
+  }
 }
   
 
 function savingsAccountDetails() {
-    var container = document.getElementById("accountDetails");
-    var lineBreak = document.createElement("br");
-
-  // Get the last child element and remove it
-    var lastChild = container.lastChild;
-    container.removeChild(lastChild);
-
-    var newLabel = document.createElement("label");
-    newLabel.textContent = "Savings Account Balance :";
-    newLabel.style = "font-size: 20px;"
-
-    var newLabel2 = document.createElement("label");
-    newLabel2.textContent = " 10,000 EGP";
-    newLabel2.style = "font-size: 20px;"
-    newLabel2.id = "currentAccountBalance"
-
-   // var newLabel3 = document.createElement("button");
-    //newLabel3.innerHTML = '<button type="button" class="btn btn-danger" onclick="alert()">Delete Account</button>'
+  // Show the hidden card
+  var accountDetailsCard = document.getElementById("accountDetails2");
+  if (accountDetailsCard.style.display === "none") {
+    accountDetailsCard.style.display = "block";
     
-    var newContainer = document.createElement("div");
-    newContainer.appendChild(newLabel);
-    newContainer.appendChild(newLabel2);
-    newContainer.appendChild(lineBreak);
-    //newContainer.appendChild(newLabel3);
+
+  }
+  else{
+    accountDetailsCard.style.display = "none";
+  
+  }
+  
     
   
-  
-    // Add the new element to the container
-    var container = document.getElementById("accountDetails");
-    container.appendChild(newContainer);
 }
+
+
 
 
 function newAccountDetails() {
@@ -183,6 +139,16 @@ function newAccountDetails() {
     // Add the new element to the container
     var container = document.getElementById("accountDetails");
     container.appendChild(newContainer);
+
+    
+      var accountDetailsCard = document.getElementById("accountDetails3");
+      if (accountDetailsCard.style.display === "none") {
+        accountDetailsCard.style.display = "block";
+      }
+      else{
+        accountDetailsCard.style.display = "none";
+      }
+    
 }
   
 function addBankAccount() { 
@@ -196,17 +162,7 @@ function addBankAccount() {
     dropDown.appendChild(newAccount)
 }
 
-function closeAccount(name){
-  var dropDown = document.getElementById("accountsDropDownMenu")
-  var dropdownItems = document.getElementsByClassName('dropdown-item');
-  for (var i = 0; i < dropdownItems.length; i++) {
-    
-    if (dropdownItems[i].textContent === name) {
-      dropDown.removeChild(dropdownItems[i]);
-      break;
-    }
-  }
-}
+
 
 function handleInternal() {
   var nameDiv = document.querySelector(".Name");
@@ -339,6 +295,11 @@ function handleSend(){
 
 function handleNotify() {
   var notificationAlert = document.getElementById("myNotification");
+  notificationAlert.style.display = "block";
+}
+
+function handleNotify() {
+  var notificationAlert = document.getElementById("myNotification8");
   notificationAlert.style.display = "block";
 }
 
@@ -536,3 +497,169 @@ function toggleReminder(){
     reminder.style.display = "none";
   }
 }
+
+function toggleForm() {
+  var form = document.getElementById("newAccountForm");
+  var accountButton = document.getElementById("navbarDropdownMenuLink");
+
+  form.style.display = "block";
+
+  accountButton.addEventListener("click", function() {
+    form.style.display = "none";
+  });
+
+  // Add an event listener to the "Confirm" button to hide the form when clicked
+  var confirmButton = document.getElementById("confirm");
+  confirmButton.addEventListener("click", function() {
+    form.style.display = "none";
+  });
+}
+
+function toggleClose() {
+  var form = document.getElementById("newAccountForm2");
+  var accountButton = document.getElementById("navbarDropdownMenuLink");
+
+  form.style.display = "block";
+
+  accountButton.addEventListener("click", function() {
+    form.style.display = "none";
+  });
+
+  // Add an event listener to the "Confirm" button to hide the form when clicked
+  var confirmButton = document.getElementById("confirm2");
+  confirmButton.addEventListener("click", function() {
+    form.style.display = "none";
+  });
+}
+
+
+
+function hideForm() {
+  var form = document.getElementById("newAccountForm");
+  form.style.display = "none";
+}
+
+
+
+
+
+function addNewAccount() {
+  var accountTypeInput = document.getElementById("inputAccountType");
+  var accountType = accountTypeInput.value;
+
+  if (accountType.trim() === "") {
+    alert("Please enter an account type.");
+    return;
+  }
+
+  var dropdownMenu = document.getElementById("accountDropdownMenu");
+
+  // Check if the account type already exists in the dropdown menu
+  var existingAccount = dropdownMenu.querySelector("a[data-account-type='" + accountType + "']");
+  if (existingAccount) {
+    alert("Account type already exists.");
+    return;
+  }
+
+  // Create a new dropdown item for the new account
+  var newDropdownItem = document.createElement("a");
+  newDropdownItem.classList.add("dropdown-item");
+  newDropdownItem.textContent = accountType;
+  newDropdownItem.setAttribute("data-account-type", accountType);
+  newDropdownItem.onclick = function() {
+    showNewAccountDetails(accountType);
+  };
+
+  // Add the new account item to the dropdown menu
+  dropdownMenu.appendChild(newDropdownItem);
+
+  // Clear the input field
+  accountTypeInput.value = "";
+}
+
+function showNewAccountDetails(accountType) {
+  var accountDetails1 = document.getElementById("accountDetails1");
+  var accountDetails2 = document.getElementById("accountDetails2");
+  var accountDetails3 = document.getElementById("accountDetails3");
+
+  accountDetails1.style.display = "none";
+  accountDetails2.style.display = "none";
+
+  // Toggle the visibility of the "Waiting for Acceptance of the New Account" card
+  if (accountType === "Check Account") {
+    if (accountDetails3.style.display === "none") {
+      accountDetails3.style.display = "block";
+    } else {
+      accountDetails3.style.display = "none";
+    }
+  } else {
+    accountDetails3.style.display = "none";
+
+    // Show the corresponding account details card based on the account type
+    if (accountType === "Current Account") {
+      accountDetails1.style.display = "block";
+    } else if (accountType === "Savings Account") {
+      accountDetails2.style.display = "block";
+    }
+  }
+}
+
+
+
+function toggleDashboard() {
+  var accountInfo = document.getElementById("AccountInfo");
+  var billingInfo = document.getElementById("BillingInfo");
+
+  if (accountInfo.style.display === "none") {
+    accountInfo.style.display = "block";
+    billingInfo.style.display = "block";
+  } else {
+    accountInfo.style.display = "none";
+    billingInfo.style.display = "none";
+  }
+}
+
+function closeAccount() {
+  var accountNameInput = document.getElementById("inputAccountName");
+  var accountName = accountNameInput.value;
+
+  if (accountName.trim() === "") {
+    alert("Please enter an account name.");
+    return;
+  }
+
+  var dropdownMenu = document.getElementById("accountDropdownMenu");
+
+  // Find the account item with the specified account name
+  var accountItems = dropdownMenu.getElementsByClassName("dropdown-item");
+  var accountItem = null;
+
+  for (var i = 0; i < accountItems.length; i++) {
+    if (accountItems[i].textContent === accountName) {
+      accountItem = accountItems[i];
+      break;
+    }
+  }
+
+  if (!accountItem) {
+    alert("Account not found.");
+    return;
+  }
+
+  // Remove the account item from the dropdown menu
+  dropdownMenu.removeChild(accountItem);
+
+  // Clear the input field
+  accountNameInput.value = "";
+}
+
+function togglePastTransactions() {
+  var pastTransactions = document.getElementById("pastTransactions");
+  if (pastTransactions.style.display === "none") {
+    pastTransactions.style.display = "block";
+  } else {
+    pastTransactions.style.display = "none";
+  }
+}
+
+
