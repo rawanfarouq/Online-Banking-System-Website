@@ -64,11 +64,43 @@ function removeCheckbox(checkbox) {
   var checkboxList = listItem.parentNode;
   checkboxList.removeChild(listItem);
 }
-
+function showModal() {
+  document.getElementById("payment-modal").style.display = "block";
+}
+function payFully() {
+  alert("Thank you for paying in full!");
+  var dropdown = document.getElementById("myDropdown");
+  var selectedIndex = dropdown.selectedIndex;
+  if (selectedIndex !== -1 && selectedIndex !== 0) {
+    dropdown.remove(selectedIndex);
+  }
+  document.getElementById("payment-modal").style.display = "none";
+}
+var value = 5000;
+function payPartially() {
+  alert("Thank you for choosing to pay partially. Please enter your payment details.");
+  var dropdown = document.getElementById("myDropdown");
+  var selectedIndex = dropdown.selectedIndex;
+  if (selectedIndex !== -1 && selectedIndex !== 0) {
+    dropdown.remove(selectedIndex);
+  }
+  document.getElementById("payment-modal").style.display = "none";
+  let toPay = prompt("How much would you like to pay?");
+  value = value-toPay;
+  var text = "Credit Card Bills - "+value+" EGP - deadline 20/10/2023";
+  var option = document.createElement("option");
+  option.text = "Credit Card Bills - " + value + " EGP - deadline 20/10/2023";
+  option.value = "CreditCard";
+  dropdown.add(option);
+}
 function removeSelectedBill() {
   var dropdown = document.getElementById("myDropdown");
   var selectedIndex = dropdown.selectedIndex;
-
+  var ValueChosen = dropdown.options[selectedIndex].value;
+  if (ValueChosen == "CreditCard"){
+      showModal();
+      return;
+  }
   if (selectedIndex !== -1 && selectedIndex !== 0) {
     dropdown.remove(selectedIndex);
     alert("Bill paid");
@@ -696,4 +728,16 @@ function toggleRequests(){
   } else {
     profileTab.style.display = "none";
   }
+}
+function handleNotify1() {
+  var notificationAlert = document.getElementById("myNotification5");
+  notificationAlert.style.display = "block";
+}
+var removeButtons = document.getElementsByClassName('removeButton');
+
+for (var i = 0; i < removeButtons.length; i++) {
+  removeButtons[i].addEventListener('click', function() {
+    var listItem = this.parentNode; // Get the parent list item
+    listItem.parentNode.removeChild(listItem); // Remove the list item
+  });
 }
