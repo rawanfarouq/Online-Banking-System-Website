@@ -68,30 +68,39 @@ function showModal() {
   document.getElementById("payment-modal").style.display = "block";
 }
 function payFully() {
-  alert("Thank you for paying in full!");
   var dropdown = document.getElementById("myDropdown");
   var selectedIndex = dropdown.selectedIndex;
   if (selectedIndex !== -1 && selectedIndex !== 0) {
     dropdown.remove(selectedIndex);
   }
   document.getElementById("payment-modal").style.display = "none";
+  alert("Thank you for paying in full!");
 }
 var value = 5000;
 function payPartially() {
-  alert("Thank you for choosing to pay partially. Please enter your payment details.");
   var dropdown = document.getElementById("myDropdown");
   var selectedIndex = dropdown.selectedIndex;
+
+  document.getElementById("payment-modal").style.display = "none";
+  let toPay = prompt("How much would you like to pay?");
+  if(toPay>value){
+    alert("You can't pay more than the total amount");
+    return;
+  }
+  value = value-toPay;
   if (selectedIndex !== -1 && selectedIndex !== 0) {
     dropdown.remove(selectedIndex);
   }
-  document.getElementById("payment-modal").style.display = "none";
-  let toPay = prompt("How much would you like to pay?");
-  value = value-toPay;
-  var text = "Credit Card Bills - "+value+" EGP - deadline 20/10/2023";
   var option = document.createElement("option");
   option.text = "Credit Card Bills - " + value + " EGP - deadline 20/10/2023";
-  option.value = "CreditCard";
-  dropdown.add(option);
+  if(value==0){
+  dropdown.remove(selectedIndex);
+  }
+  else{
+    option.value = "CreditCard";
+    dropdown.add(option);
+  }
+  alert("Thank you for choosing to pay partially.");
 }
 function removeSelectedBill() {
   var dropdown = document.getElementById("myDropdown");
