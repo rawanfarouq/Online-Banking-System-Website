@@ -541,13 +541,13 @@ function toggleReminder(){
 
 function toggleForm() {
   var form = document.getElementById("newAccountForm");
-  var accountButton = document.getElementById("navbarDropdownMenuLink");
+ // var accountButton = document.getElementById("navbarDropdownMenuLink");
 
   form.style.display = "block";
 
-  accountButton.addEventListener("click", function() {
+ /* accountButton.addEventListener("click", function() {
     form.style.display = "none";
-  });
+  });*/
 
   // Add an event listener to the "Confirm" button to hide the form when clicked
   var confirmButton = document.getElementById("confirm");
@@ -574,7 +574,6 @@ function toggleClose() {
 }
 
 
-
 function hideForm() {
   var form = document.getElementById("newAccountForm");
   form.style.display = "none";
@@ -584,7 +583,7 @@ function hideForm() {
 
 
 
-function addNewAccount() {
+/*function addNewAccount() {
   var accountTypeInput = document.getElementById("inputAccountType");
   var accountType = accountTypeInput.value;
 
@@ -616,25 +615,16 @@ function addNewAccount() {
 
   // Clear the input field
   accountTypeInput.value = "";
-}
+}*/
 
 function showNewAccountDetails(accountType) {
   var accountDetails1 = document.getElementById("accountDetails1");
   var accountDetails2 = document.getElementById("accountDetails2");
-  var accountDetails3 = document.getElementById("accountDetails3");
 
   accountDetails1.style.display = "none";
   accountDetails2.style.display = "none";
 
-  // Toggle the visibility of the "Waiting for Acceptance of the New Account" card
-  if (accountType === "Check Account") {
-    if (accountDetails3.style.display === "none") {
-      accountDetails3.style.display = "block";
-    } else {
-      accountDetails3.style.display = "none";
-    }
-  } else {
-    accountDetails3.style.display = "none";
+  
 
     // Show the corresponding account details card based on the account type
     if (accountType === "Current Account") {
@@ -643,7 +633,9 @@ function showNewAccountDetails(accountType) {
       accountDetails2.style.display = "block";
     }
   }
-}
+
+
+
 
 
 
@@ -660,7 +652,7 @@ function toggleDashboard() {
   }
 }
 
-function closeAccount() {
+/*function closeAccount() {
   var accountNameInput = document.getElementById("inputAccountName");
   var accountName = accountNameInput.value;
 
@@ -692,7 +684,7 @@ function closeAccount() {
 
   // Clear the input field
   accountNameInput.value = "";
-}
+}*/
 
 function togglePastTransactions() {
   var pastTransactions = document.getElementById("pastTransactions");
@@ -750,3 +742,38 @@ for (var i = 0; i < removeButtons.length; i++) {
     listItem.parentNode.removeChild(listItem); // Remove the list item
   });
 }
+
+function acceptRequest(element) {
+  var card = element.closest(".card");
+  card.style.display = "none";
+
+  // Shift the remaining cards
+  var remainingCards = document.querySelectorAll(".card:not([style='display: none;'])");
+  var cardIndex = Array.from(remainingCards).indexOf(card);
+  for (var i = cardIndex + 1; i < remainingCards.length; i++) {
+    remainingCards[i].style.transform = `translateY(-${i * 24}px)`;
+  }
+
+  // Store the accepted status in sessionStorage for 1 hour (3600000 milliseconds)
+  var expirationTime =new Date().getTime() + 120000;
+  sessionStorage.setItem("accountStatus", JSON.stringify({ status: "Accepted Account", expires: expirationTime }));
+}
+
+function rejectRequest(element) {
+  var card = element.closest(".card");
+  card.style.display = "none";
+
+  // Shift the remaining cards
+  var remainingCards = document.querySelectorAll(".card:not([style='display: none;'])");
+  var cardIndex = Array.from(remainingCards).indexOf(card);
+  for (var i = cardIndex + 1; i < remainingCards.length; i++) {
+    remainingCards[i].style.transform = `translateY(-${i * 24}px)`;
+  }
+
+  // Store the rejected status in sessionStorage for 1 hour (3600000 milliseconds)
+  var expirationTime =  new Date().getTime() +120000;
+  sessionStorage.setItem("accountStatus", JSON.stringify({ status: "Rejected Account", expires: expirationTime }));
+}
+
+
+
