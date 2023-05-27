@@ -503,13 +503,14 @@ function handleOverview() {
   revenue3Card.style.display = (revenue3Card.style.display === "none") ? "block" : "none";
 }
 
-function handleTechnical(){
+function handleTechnical() {
   var technicalCard = document.getElementById("myTechnical");
   var technical2Card = document.getElementById("myTechnical2");
-  var technica3lCard = document.getElementById("myTechnical3");
+  var technical3Card = document.getElementById("myTechnical3");
+
   technicalCard.style.display = (technicalCard.style.display === "none") ? "block" : "none";
   technical2Card.style.display = (technical2Card.style.display === "none") ? "block" : "none";
-  technica3lCard.style.display = (technica3lCard.style.display === "none") ? "block" : "none";
+  technical3Card.style.display = (technical3Card.style.display === "none") ? "block" : "none";
 }
 
 function handleCustomer(){
@@ -775,5 +776,26 @@ function rejectRequest(element) {
   sessionStorage.setItem("accountStatus", JSON.stringify({ status: "Rejected Account", expires: expirationTime }));
 }
 
+function toggleReminderAdmin(){
+  var reminder = document.getElementById("AdminReminder");
+  if (reminder.style.display === "none") {
+    reminder.style.display = "block";
+  } else {
+    reminder.style.display = "none";
+  }
+}
 
+
+function handleResponse(response) {
+  alert("Request is " + response);
+  var card = event.target.closest(".card");
+  card.style.display = "none";
+
+  // Shift the remaining cards
+  var remainingCards = document.querySelectorAll(".card:not([style='display: none;'])");
+  var cardIndex = Array.from(remainingCards).indexOf(card);
+  for (var i = cardIndex + 1; i < remainingCards.length; i++) {
+    remainingCards[i].style.transform = `translateY(-${i * 24}px)`;
+  }
+}
 

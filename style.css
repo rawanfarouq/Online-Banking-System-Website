@@ -605,4 +605,13 @@ nav {
     font-size: 20px;
 }
 
+#AdminReminder{
+  position: absolute;
+  top: 60px;
+  left: 700px;
+  width: 50rem;
+  height: 18rem;
+}
+
+
 

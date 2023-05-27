@@ -32,11 +32,23 @@
               <a class="nav-link" href="Home.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="reminders.html">Reminders</a>
+              <a class="nav-link" href="#" onclick="toggleReminderAdmin()">Reminders</a>
             </li>
           </ul>
         </div>
       </nav>
+
+      <div class="alert alert-success alert-dismissible fade show" role="alert" id="AdminReminder" style="display: none;" >
+        <strong>Reminders!</strong>
+        <br> <strong>Data Backup Reminder:</strong><br>
+        Regularly back up critical customer data to ensure data integrity and disaster recovery readiness.
+        <br> -Issue Resolved - Account Opening Process:the issue related to the account opening process has been successfully resolved.
+        <br><strong>Security Update Reminder:</strong> <br> Apply the latest security updates to the bank's system. Keep the infrastructure protected from potential vulnerabilities.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
 
       <h1 class="AdminName" > Rebooters Admin <span class="badge badge-secondary"></span></h1>
       <h2 class="AdminEmail" > admin@yahoo.com <span class="badge badge-secondary"></span></h2>
@@ -72,30 +84,30 @@
             </div>
           </div> 
 
-          <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; display: none;" id="myTechnical">
+          <div class="card text-white bg-info mb-3" style="max-width: 18rem; display: none;" id="myTechnical">
             <div class="card-body">
               <h5 class="card-title"><strong>Server Downtime</strong></h5>
               <p class="card-text">Urgent! The bank's main server is currently down due to a power outage. IT team is actively working to restore services. Estimated downtime: 2 hours.</p>
-              <a href="#" class="card-link"onclick="alert('Request is Accepted')">Accept</a>
-              <a href="#" class="card-link"onclick="alert('Request is Rejected')">Reject</a>
+              <a href="#" class="card-link" onclick="handleResponse('Accepted')" style="color: black;" >Accept</a>
+              <a href="#" class="card-link" onclick="handleResponse('Rejected')"style="color: black;">Reject</a>
             </div>
           </div>
 
-          <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; display: none;" id="myTechnical2">
+          <div class="card text-white bg-info mb-3" style="max-width: 18rem; display: none;" id="myTechnical2">
             <div class="card-body">
               <h5 class="card-title"><strong>Application Crash</strong></h5>
               <p class="card-text">Alert! The banking application has encountered a critical error and crashed for a small subset of users. Development team is investigating the issue and working on a fix.</p>
-              <a href="#" class="card-link"onclick="alert('Request is Accepted')">Accept</a>
-              <a href="#" class="card-link"onclick="alert('Request is Rejected')">Reject</a>
+              <a href="#" class="card-link"onclick="handleResponse('Accepted')"style="color: black;">Accept</a>
+              <a href="#" class="card-link"onclick="handleResponse('Rejected')"style="color: black;">Reject</a>
             </div>
           </div>
 
-          <div class="card text-white bg-secondary mb-3" style="max-width: 18rem; display: none;" id="myTechnical3">
+          <div class="card text-white bg-info mb-3" style="max-width: 18rem; display: none;" id="myTechnical3">
             <div class="card-body">
               <h5 class="card-title"><strong>ATM Outage</strong></h5>
               <p class="card-text">Attention! One of the ATMs located at our downtown branch is currently out of service. Customers will not be able to withdraw cash or perform any transactions using this ATM until the issue is resolved.  </p>
-              <a href="#" class="card-link"onclick="alert('Request is Accepted')">Accept</a>
-              <a href="#" class="card-link"onclick="alert('Request is Rejected')">Reject</a>
+              <a href="#" class="card-link"onclick="handleResponse('Accepted')" style="color: black;">Accept</a>
+              <a href="#" class="card-link"onclick="handleResponse('Rejected')" style="color: black;">Reject</a>
             </div>
           </div>
 
@@ -103,8 +115,8 @@
             <div class="card-body">
               <h5 class="card-title"><strong>Failed Transaction </strong></h5>
               <p class="card-text">A customer has reported a failed transaction while attempting to withdraw $100 .</p>
-              <a href="#" class="card-link"onclick="alert('Request is Accepted')">Accept</a>
-              <a href="#" class="card-link"onclick="alert('Request is rejected')">Reject</a>
+              <a href="#" class="card-link"onclick="handleResponse('Accepted')">Accept</a>
+              <a href="#" class="card-link"onclick="handleResponse('Rejected')">Reject</a>
             </div>
           </div>
 
@@ -112,8 +124,8 @@
             <div class="card-body">
               <h5 class="card-title"><strong>Credit Card Lost </strong></h5>
               <p class="card-text"> A customer has notified us about a lost credit card.Please deactivate the credit card linked to their account and initiate the necessary procedures to issue a replacement card.</p>
-              <a href="#" class="card-link"onclick="alert('Request is Accepted')">Accept</a>
-              <a href="#" class="card-link"onclick="alert('Request is Rejected')">Reject</a>
+              <a href="#" class="card-link"onclick="handleResponse('Accepted')">Accept</a>
+              <a href="#" class="card-link"onclick="handleResponse('Rejected')">Reject</a>
             </div>
           </div>
 
@@ -121,8 +133,8 @@
             <div class="card-body">
               <h5 class="card-title"><strong>Problem in Creating New Account </strong></h5>
               <p class="card-text"> A customer encountered difficulties while attempting to create a new bank account online.</p>
-              <a href="#" class="card-link" onclick="alert('Request is Accepted')">Accept</a>
-              <a href="#" class="card-link"onclick="alert('Request is Rejected')">Reject</a>
+              <a href="#" class="card-link" onclick="handleResponse('Accepted')">Accept</a>
+              <a href="#" class="card-link" onclick="handleResponse('Rejected')">Reject</a>
             </div>
           </div>
 
