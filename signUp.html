@@ -8,17 +8,42 @@
     <link rel="stylesheet" href="style.css">    
     <script src="app.js"></script>
     <title>signUp</title>
+    <style>
+      body {
+        background-image: url('Background_Logo.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      </style>
+
 </head>
 <body>
-    <div class="input-group mb-3">
-        <input id="SignUpUsername" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="button-addon2">
-      </div>       
-      <div class="input-group mb-3">
-        <input id="SignUpPassword" type="text" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="button-addon2">
-      </div> 
-      <div class="input-group-append">
-        <button onclick="signUp()" id="signUpButton" class="btn btn-outline-secondary" type="button">Sign Up</button>
-      </div> 
+
+  <h1 class="TitleSign">Sign Up <span class="badge badge-secondary"></span></h1>
+  <div class="input-group mb-3" id="UsernameSign">
+    <input id="SignUpUsername" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="button-addon2">
+  </div>
+  
+  <div class="input-group mb-3" id="PasswordSign">
+    <input id="SignUpPassword" type="text" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="button-addon2">
+  </div>
+  
+  <div class="input-group-append" id="PressSignUp">
+    <button onclick="signUp()" id="signUpButton" class="btn btn-primary" type="button">Sign Up</button>
+  </div>
+  
+  <div class="input-group mb-3" id="CheckTerms">
+    <div class="input-group-prepend">
+      <div class="input-group-text">
+        <input type="checkbox" id="TermsCheckbox" aria-label="Checkbox for following text input">
+      </div>
+    </div>
+  </div>
+  <h4 class="TitleCheck">I agree to all statements in the Terms of Service <span class="badge badge-secondary"></span></h4>
+
+
+      <img src="Untitled.png" alt="Image Description" width="400" height="400" class="img-thumbnail"id="Logo_Login">
 
 </body>
 </html>

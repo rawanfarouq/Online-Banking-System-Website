@@ -474,20 +474,41 @@ else{
 }
 
 function loginCredentials() {
-  if (document.getElementById("Username").value == "client" && document.getElementById("Password").value == "client") {
-    window.location.assign('Accounts.html');
-  } else if (document.getElementById("Username").value == "admin" && document.getElementById("Password").value == "admin") {
-    window.location.assign('admin.html');
-  } else if (document.getElementById("Username").value == "banker" && document.getElementById("Password").value == "banker") {
-    window.location.assign('banker.html');
+  var username = document.getElementById("Username").value;
+  var password = document.getElementById("Password").value;
+
+  if (!username && !password) {
+    alert("Username and password are empty. Please fill them.");
+  } else if (!username) {
+    alert("Username is empty. Please fill it.");
+  } else if (!password) {
+    alert("Password is empty. Please fill it.");
+  } else {
+    if (username === "client" && password === "client") {
+      window.location.assign('Accounts.html');
+    } else if (username === "admin" && password === "admin") {
+      window.location.assign('admin.html');
+    } else if (username === "banker" && password === "banker") {
+      window.location.assign('banker.html');
+    } else {
+      alert("Invalid username or password.");
+    }
   }
 }
 
 
 function signUp(){
+
+  var termsCheckbox = document.getElementById("TermsCheckbox");
+
   if(document.getElementById("SignUpUsername").value=="" || document.getElementById("SignUpPassword").value=="" ){
-      alert('Please enter valid credentials')
+      alert('Please enter valid credentials');
+      return;
   }
+  else if (!termsCheckbox.checked) {
+    alert("Please agree to the Terms of Service.");
+    return;
+  } 
   else{
     location.replace('/Login.html');
   }

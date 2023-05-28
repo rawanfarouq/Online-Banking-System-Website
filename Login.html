@@ -8,21 +8,36 @@
     <link rel="stylesheet" href="style.css"> 
     <script src="app.js"></script>   
     <title>login</title>
+    <style>
+      body {
+        background-image: url('Background_Logo.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      </style>
 </head>
 <body>
-    <div class="input-group mb-3">
+
+    <h1 class="TextLogin"> Login <span class="badge badge-secondary" ></span></h1>
+    <h6 class="TextSign">Doesn't have an account yet?<button type="button" class="btn btn-link" onclick="redirectToSign()" id="buttonSign" >Sign Up</button>
+      <span class="badge badge-secondary"></span></h6>
+
+
+    <div class="input-group mb-3" id="LoginPageUsername">
         <input id="Username" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="button-addon2">
+        
       </div>       
-      <div class="input-group mb-3">
+      <div class="input-group mb-3" id="LoginPagePassword">
         <input id="Password" type="text" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="button-addon2">
       </div> 
-      <div class="input-group-append">
+      <div class="input-group-append" id="PressLogin">
         <button onclick="loginCredentials()" id="loginButton" class="btn btn-outline-secondary" type="button">Login</button>
       </div> 
-      <div class="SignUp">
-        <a href="signUp.html">Sign up</a>
-      </div> 
+      
 
+
+      <img src="Login.gif" alt="Image Description" width="400" height="400" class="img-thumbnail"id="Logo_Login">
 
 </body>
 </html>
