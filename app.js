@@ -510,6 +510,7 @@ function signUp(){
     return;
   } 
   else{
+    alert("Request sent Successfully");
     location.replace('/Login.html');
   }
 }
@@ -819,4 +820,83 @@ function handleResponse(response) {
     remainingCards[i].style.transform = `translateY(-${i * 24}px)`;
   }
 }
+
+function toggleNotify12(){
+  var notificationAlert = document.getElementById("myNotification12");
+  notificationAlert.style.display = "block";
+}
+
+function toggleSendReminder() {
+  var form = document.getElementById("newSendForm");
+  if (form.style.display === "none") {
+    form.style.display = "block";
+  } else {
+    form.style.display = "none";
+  }
+}
+
+function togglebankAnnouncement(){
+  var form = document.getElementById("bankAnnouncement");
+  if (form.style.display === "none") {
+    form.style.display = "block";
+  } else {
+    form.style.display = "none";
+  }
+}
+
+
+function sendForm(type, inputId) {
+  var input = document.getElementById(inputId);
+
+  if (!input.value) {
+    alert('Please fill the text');
+  } else {
+    var message;
+    if (type === 'Client') {
+      message = 'Sent successfully to the Client';
+    } else if (type === 'Admin') {
+      message = 'Sent successfully to the Admin';
+    }
+    
+    alert(message);
+  }
+}
+
+function sendNotifications() {
+  var form = document.getElementById("newSendNotify");
+  if (form.style.display === "none") {
+    form.style.display = "block";
+  } else {
+    form.style.display = "none";
+  }
+}
+
+function NotificationForm(type, inputId) {
+  var input = document.getElementById(inputId);
+
+  if (!input.value) {
+    alert('Please fill the text');
+  } else {
+    var message;
+    if (type === 'Client') {
+      message = 'Sent successfully to the Client';
+    } else if (type === 'Banker') {
+      message = 'Sent successfully to the Banker';
+    }
+
+    alert(message);
+  }
+}
+
+function sendAdminAnnouncements(){
+  var form = document.getElementById("AdminAnnouncement");
+  if (form.style.display === "none") {
+    form.style.display = "block";
+  } else {
+    form.style.display = "none";
+  }
+}
+
+
+
 

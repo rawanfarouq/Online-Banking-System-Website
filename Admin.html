@@ -58,7 +58,33 @@
           <button type="button" class="btn btn-secondary" onclick="handleOverview()">Overview</button>
           <button type="button" class="btn btn-secondary" onclick="handleTechnical()">Technical Issues</button>
           <button type="button" class="btn btn-secondary"onclick="handleCustomer()">Customer Issues</button>
+          <button type="button" class="btn btn-secondary" onclick="sendNotifications()">Sends Notification</button>
+          <button type="button" class="btn btn-secondary" onclick="sendAdminAnnouncements()">Sends Admin Announcements</button>
+
         </div>
+
+        <form class="form-inline" id="newSendNotify" >
+          <div class="form-group mx-sm-3 mb-2">
+            <label for="inputAccountName" class="sr-only">Send Notification</label>
+            <input type="text" class="form-control" id="inputAccountNameSendNotification" placeholder="Send Notification">
+          </div>
+          <div class="btn-group" role="group" aria-label="Basic example" id="confirmNotification">
+            <button type="button" class="btn btn-primary" onclick="NotificationForm('Client', 'inputAccountNameSendNotification')">Client</button>
+            <button type="button" class="btn btn-primary" onclick="NotificationForm('Banker', 'inputAccountNameSendNotification')">Banker</button>
+          </div>
+        </form>
+
+        <form class="form-inline" id="AdminAnnouncement" style="display: none;" >
+          <div class="form-group mx-sm-3 mb-2">
+            <label for="inputAccountName" class="sr-only">Send Bank Announcements</label>
+            <input type="text" class="form-control" id="inputAccountNameAdminAnnouncement" placeholder="Admin Announcements">
+          </div>
+          <div class="btn-group" role="group" aria-label="Basic example" id="SendAdminAnnouncement">
+            <button type="button" class="btn btn-primary" onclick="NotificationForm('Client', 'inputAccountNameAdminAnnouncement')">Client</button>
+            <button type="button" class="btn btn-primary" onclick="NotificationForm('Banker', 'inputAccountNameAdminAnnouncement')">Admin</button>
+
+          </div>
+        </form>
 
         <div class="card border-info mb-3" style="max-width: 18rem; display: none;" id="myRevenue">
             <div class="card-header"><strong>Monthly Revenue Report</strong></div>

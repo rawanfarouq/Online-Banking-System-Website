@@ -707,3 +707,53 @@ nav {
   color: blue;
 }
 
+#newSendForm{
+  position: absolute;
+  top: 118px;
+  left: 360px;
+}
+
+#Sendconfirm{
+  position: absolute;
+  top: 0px;
+  left: 230px;
+}
+
+#bankAnnouncement{
+  position: absolute;
+  top: 160px;
+  left: 360px;
+}
+
+#SendbankAnnouncement{
+  position: absolute;
+  top: 0px;
+  left: 230px;
+}
+
+#newSendNotify{
+  position: absolute;
+  top: 435px;
+  left: 240px;
+}
+
+#confirmNotification{
+  position: absolute;
+  top: 0px;
+  left: 230px;
+}
+
+#AdminAnnouncement{
+
+  position: absolute;
+  top: 468px;
+  left: 240px;
+}
+
+#SendAdminAnnouncement{
+  position: absolute;
+  top: 0px;
+  left: 230px;
+
+}
+

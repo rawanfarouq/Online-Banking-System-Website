@@ -1,24 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css"> 
-    <script src="app.js"></Script>
+    <script src="app.js"></script>
+  <title>Document</title>
+  <style>
+    body {
+      background-image: url('Background_Logo.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  </style>
 
-      <style>
-        body {
-          background-image: url('Background_Logo.jpg');
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          background-size: cover;
-        }
-      </style>
-    <title>personalLoan</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  input[type="text"]:focus,
+  input[type="date"]:focus {
+    outline: none;
+    border-color: #6c63ff;
+  }
+
+  .button-container {
+    text-align: center;
+  }
+
+  .submit-button {
+    background-color: #6c63ff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .submit-button:hover {
+    background-color: #5248e3;
+  }
+</style>
+
 </head>
 <body>
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="myNavbar">
     <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +97,7 @@
           <a class="nav-link" href="Accounts.html">Your Accounts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="creditcard.html">Credit Cards</a>
+          <a class="nav-link" href="creditcard.html">Your Credit Cards</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -49,32 +113,99 @@
         </li>
       </ul>
     </div>
-  </nav> 
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  
-    <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text">First and last name</span>
-        </div>
-        <input id="firstName" type="text" aria-label="First name" class="form-control">
-        <input id="lastName" type="text" aria-label="Last name" class="form-control">
-      </div>
-      <div class="input-group mb-3">
-        <input id="Amount" type="number" class="form-control" placeholder="Amount needed" aria-label="Amount needed" aria-describedby="button-addon2">
-        <div class="input-group-append">
-          <button onclick="carLoanCredentials()" class="btn btn-primary" type="button" id="button-addon2">Submit</button>
-        </div>
-      </div>
+  </nav>
 
+  <div class="alert alert-success alert-dismissible fade show" role="alert" id="myNotification8" style="display: none;">
+    <strong>Notifications!</strong><br> -Loan Accepted.<br>
+    -You transferred to an Account 1827372837 : 12,000 EGP <br>
+    -Credit Card Accepted <br>
+    -Bill Payment Accepted <br>
+    -Loan Accepted <br>
+    -Payed 1000 EGP on Noon, Left Balance=4000 EGP <br>
+    -Redeemed 200 points <br>
+    -The issue you reported got resolved
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="container">
+    <h2 style="text-align: center; color: #6c63ff;">Personal Loan</h2>
+
+    <div class="form-group" id="element">
+      <label for="name" style="color: #ff9933;">Name:</label>
+      <input type="text" id="name">
+    </div>
+    
+    <div class="form-group">
+      <label for="birthdate" style="color: #ff9933;">Birthdate:</label>
+      <input type="date" id="birthdate">
+    </div>
+    
+    <div class="form-group">
+      <label for="mobile" style="color: #ff9933;">Mobile Number:</label>
+      <input type="text" id="mobile">
+    </div>
+
+    <div class="form-group">
+      <label for="mobile" style="color: #ff9933;">National_ID/Passport_ID:</label>
+      <input type="text" id="National_ID">
+    </div>
+
+    <div class="form-group">
+      <label for="mobile" style="color: #ff9933;">Type Of Job:</label>
+      <input type="text" id="jobType">
+    </div>
+
+    <div class="form-group">
+      <label for="mobile" style="color: #ff9933;">Amount:</label>
+      <input type="text" id="amount">
+    </div>
+    
+    <div class="button-container">
+      <button class="submit-button" onclick="showPopupMessage()">Apply Now</button>
+    </div>
+  </div>
+
+  <script>
+    
+
+    function showPopupMessage() {
+  var nameInput = document.getElementById("name");
+  var birthdateInput = document.getElementById("birthdate");
+  var mobileInput = document.getElementById("mobile");
+  var nationalInput = document.getElementById("National_ID");
+  var jobInput = document.getElementById("jobType");
+  var amountInput = document.getElementById("amount");
+
+  if (nameInput.value === "") {
+    alert('Please enter a name');
+  } else if (birthdateInput.value === "") {
+    alert('Please enter a valid birthdate');
+  } else if (nationalInput.value === "") {
+    alert('Please enter a National ID or Passport ID');
+  } else if (jobInput.value === "student"|| jobInput.value === "Student") {
+    alert("Sorry, students can't apply for a loan");
+  } else if (amountInput.value === "") {
+    alert("Please enter the loan amount");
+  } else {
+    var birthdate = new Date(birthdateInput.value);
+    var currentYear = new Date().getFullYear();
+    var minimumAge = 25;
+    var minimumBirthYear = currentYear - minimumAge;
+
+    if (birthdate.getFullYear() >= minimumBirthYear) {
+      alert("Sorry, you can't apply for a loan!");
+    } else if (mobileInput.value === "") {
+      alert('Please enter a valid number');
+    } else {
+      alert("Request is Successful!");
+    }
+  }
+}
+
+</script>
+
+  
 </body>
 </html>

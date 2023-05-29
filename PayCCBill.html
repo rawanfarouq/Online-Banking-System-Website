@@ -37,7 +37,7 @@
           <a class="nav-link" href="Accounts.html">Your Accounts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="creditcard.html">Credit Cards</a>
+          <a class="nav-link" href="creditcard.html">Your Credit Cards</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -114,17 +114,46 @@
         }
       </style>
       <script>
+        var amount = 13587; // Initial amount of money
+        var remainingAmount = amount; // Variable to store the remaining amount
+
         function showAmountInput() {
-          var amountInput = document.getElementById("amount-input");
-          if (document.getElementById("partial-points").checked) {
-            amountInput.style.display = "block";
-          } else {
-            amountInput.style.display = "none";
-          }
+            var amountInput = document.getElementById("amount-input");
+            if (document.getElementById("partial-points").checked) {
+                amountInput.style.display = "block";
+            } else {
+                amountInput.style.display = "none";
+            }
         }
-        
+
+        function updateMoneyDisplay() {
+            var moneyElement = document.getElementById("money-display");
+            moneyElement.textContent = "Amount of Money: $" + remainingAmount;
+        }
+
         function showPopupMessage() {
-          alert("Payment Successful!.");
+            var partialPoints = document.getElementById("partial-points").checked;
+            var amountInput = document.getElementById("amount");
+            var paidAmount = parseInt(amountInput.value);
+
+            if (partialPoints && paidAmount > 0) {
+                if (paidAmount <= remainingAmount) {
+                    remainingAmount -= paidAmount;
+                    updateMoneyDisplay();
+                    alert("Payment of $" + paidAmount + " successful. Remaining amount: $" + remainingAmount);
+                } else {
+                    alert("Payment amount exceeds the remaining amount.");
+                }
+            } else if (!partialPoints) {
+                remainingAmount = 0;
+                updateMoneyDisplay();
+                alert("Payment of $" + amount + " successful. Remaining amount: $" + remainingAmount);
+            } else {
+                alert("Please enter a valid amount.");
+            }
+
+            // Reset the input field
+            amountInput.value = "";
         }
       </script>
     </head>
@@ -133,30 +162,31 @@
         Credit Card Payment
       </div>
       
-      <div class="money">
-        Amount of Money: $13,587
-      </div>
       
-      <div class="points-container">
-        <div class="points-select">
+    <div class="money" id="money-display">
+      Amount of Money: $13,587
+  </div>
+
+  <div class="points-container">
+      <div class="points-select">
           <input type="radio" id="partial-points" name="points" checked onclick="showAmountInput()">
           <label for="partial-points">Partial Amount</label>
-        </div>
-        
-        <div class="points-select">
+      </div>
+
+      <div class="points-select">
           <input type="radio" id="full-points" name="points" onclick="showAmountInput()">
           <label for="full-points">Full Amount</label>
-        </div>
       </div>
-      
-      <div id="amount-input" class="amount-input">
-        <label class="amount-label" for="amount">Write Amount:</label>
-        <input type="text" id="amount" name="amount">
-      </div>
-      
-      <div class="button-container">
-        <button class="green-button" onclick="showPopupMessage()">Pay Now</button>
-      </div>
+  </div>
+
+  <div id="amount-input" class="amount-input">
+    <label class="amount-label" for="amount">Write Amount:</label>
+    <input type="text" id="amount" name="amount">
+</div>
+
+<div class="button-container">
+    <button class="green-button" onclick="showPopupMessage()">Pay Now</button>
+</div>
     </body>
     </html>
     
