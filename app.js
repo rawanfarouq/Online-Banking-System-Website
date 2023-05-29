@@ -469,7 +469,7 @@ if(document.getElementById("firstName").value=="" || document.getElementById("la
     alert('Please enter valid credentials')
 }
 else{
-    alert('Loan Successful')
+    alert('Loan Request Sent Successfuly!')
   }
 }
 

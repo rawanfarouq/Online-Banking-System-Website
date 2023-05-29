@@ -7,41 +7,59 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css"> 
     <script src="app.js"></Script>
-
+      <style>
+        body {
+          background-image: url('Background_Logo.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+      </style>
     <title>carLoan</title>
 </head>
 <body>
-  <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Banking System</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="myNavbar">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item active">
+          <a class="nav-link" href="Home.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="Accounts.html">Your Accounts</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="creditcard.html">Credit Cards</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="bills.html">Bills</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Others
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="bills.html">Bills</a>
+            <a class="dropdown-item" href="loan.html">Loans</a>
+            <a class="dropdown-item" href="reminders.html">Reminders</a>
+            <a class="dropdown-item" onclick="handleNotify()" href="#">Notifications</a>
+            <a class="dropdown-item" href="Report.html">Report Issues</a>
+          </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="loan.html">Loans</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="reminders.html">Reminders</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="">Notifications</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="Report.html">Report Issues</a>
-          </li>
       </ul>
     </div>
-  </nav>
+  </nav> 
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
     <div class="input-group">
         <div class="input-group-prepend">
           <span class="input-group-text">First and last name</span>
@@ -52,7 +70,7 @@
       <div class="input-group mb-3">
         <input id="Amount" type="number" class="form-control" placeholder="Amount needed" aria-label="Amount needed" aria-describedby="button-addon2">
         <div class="input-group-append">
-          <button onclick="carLoanCredentials()" class="btn btn-outline-secondary" type="button" id="button-addon2">Submit</button>
+          <button onclick="carLoanCredentials()" class="btn btn-primary" type="button" id="button-addon2">Submit</button>
         </div>
       </div>
 
